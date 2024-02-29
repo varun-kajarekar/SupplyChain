@@ -1,6 +1,11 @@
 package com.t7.supplychain.Controller;
 
+import com.t7.supplychain.Entity.VendorOrderEntity;
+import com.t7.supplychain.Service.SuperviseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -12,7 +17,8 @@ import java.net.URL;
 
 @RestController
 public class Inventory {
-
+    @Autowired
+    SuperviseService superviseService;
 
 
 
@@ -30,5 +36,11 @@ public class Inventory {
         }
         in.close();
         //System.out.println(content.);
+    }
+
+
+    @PostMapping("/vendororder")
+    public VendorOrderEntity VendorOrder(@RequestBody VendorOrderEntity vendorOrderEntity){
+        return superviseService.AddVendorOrder(vendorOrderEntity);
     }
 }

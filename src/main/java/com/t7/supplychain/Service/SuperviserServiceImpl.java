@@ -2,7 +2,9 @@ package com.t7.supplychain.Service;
 
 import com.t7.supplychain.Entity.ResponseEntity;
 import com.t7.supplychain.Entity.SuperviserEntity;
+import com.t7.supplychain.Entity.VendorOrderEntity;
 import com.t7.supplychain.Repository.SuperviserRepository;
+import com.t7.supplychain.Repository.VendorOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,9 @@ public class SuperviserServiceImpl implements SuperviseService{
 
     @Autowired
     SuperviserRepository superviserRepository;
+
+    @Autowired
+    VendorOrder vendorOrder;
 
     @Autowired
     ResponseEntity response;
@@ -37,5 +42,10 @@ public class SuperviserServiceImpl implements SuperviseService{
         response.setToken("");
         response.setMsg("Login Failed");
         return response;
+    }
+
+    @Override
+    public VendorOrderEntity AddVendorOrder(VendorOrderEntity vendorOrderEntity) {
+        return vendorOrder.save(vendorOrderEntity);
     }
 }
