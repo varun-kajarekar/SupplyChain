@@ -1,8 +1,8 @@
+com\t7\supplychain\Repository\SuperviserRepository.class
+com\t7\supplychain\Entity\SuperviserEntity.class
+com\t7\supplychain\Service\SuperviseService.class
 com\t7\supplychain\SupplychainApplication.class
 com\t7\supplychain\Controller\Inventory.class
 com\t7\supplychain\Entity\ResponseEntity.class
-com\t7\supplychain\Repository\SuperviserRepository.class
 com\t7\supplychain\Controller\SuperviserLogin.class
-com\t7\supplychain\Entity\SuperviserEntity.class
 com\t7\supplychain\Service\SuperviserServiceImpl.class
-com\t7\supplychain\Service\SuperviseService.class

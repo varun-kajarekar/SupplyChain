@@ -1,20 +1,18 @@
 package com.t7.supplychain.Controller;
 
-import com.t7.supplychain.Entity.VendorOrderEntity;
+import com.t7.supplychain.Entity.Requirement;
 import com.t7.supplychain.Service.SuperviseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
+import java.util.List;
 
+@CrossOrigin()
 @RestController
 public class Inventory {
     @Autowired
@@ -39,8 +37,12 @@ public class Inventory {
     }
 
 
-    @PostMapping("/vendororder")
-    public VendorOrderEntity VendorOrder(@RequestBody VendorOrderEntity vendorOrderEntity){
-        return superviseService.AddVendorOrder(vendorOrderEntity);
+    @PostMapping("/add-requirement")
+    public Requirement addrequirement(@RequestBody Requirement requirement){
+        return superviseService.addrequirement(requirement);
+    }
+    @GetMapping("/get-requirement")
+    public List<Requirement> getRequirement(){
+        return superviseService.getRequirement();
     }
 }

@@ -1,10 +1,13 @@
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Controller\SuperviserLogin.java
-C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\VendorOrderEntity.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Service\SuperviserServiceImpl.java
-C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Controller\Inventory.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Controller\MailController.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\MailStructure.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Repository\SuperviserRepository.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Service\SuperviseService.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\SupplychainApplication.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Service\MailService.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\ResponseEntity.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Controller\Inventory.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\SuperviserEntity.java
-C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Repository\VendorOrder.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Repository\RequirementRepository.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\Requirement.java
