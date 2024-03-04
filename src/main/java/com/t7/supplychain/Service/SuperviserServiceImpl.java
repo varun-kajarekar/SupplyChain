@@ -3,11 +3,14 @@ package com.t7.supplychain.Service;
 import com.t7.supplychain.Entity.ResponseEntity;
 import com.t7.supplychain.Entity.SuperviserEntity;
 import com.t7.supplychain.Entity.Requirement;
+import com.t7.supplychain.Entity.SupervisorReq;
 import com.t7.supplychain.Repository.RequirementRepository;
 import com.t7.supplychain.Repository.SuperviserRepository;
+import com.t7.supplychain.Repository.SupervisorReqRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -21,6 +24,9 @@ public class SuperviserServiceImpl implements SuperviseService{
 
     @Autowired
     ResponseEntity response;
+
+    @Autowired
+    SupervisorReqRepo supervisorReqRepo;
 
     @Override
     public SuperviserEntity AddSuperViser(SuperviserEntity superviserEntity) {
@@ -61,5 +67,18 @@ public class SuperviserServiceImpl implements SuperviseService{
     @Override
     public List<Requirement> getRequirement() {
         return requirementRepository.findAll();
+    }
+
+    @Override
+    public SupervisorReq addvendorReq(SupervisorReq supervisorReq) {
+        supervisorReqRepo.save(supervisorReq);
+        return supervisorReq;
+    }
+
+    @Override
+    public List<SupervisorReq> getvendorReq() {
+        List<SupervisorReq> reqD = supervisorReqRepo.findAll();
+        Collections.sort(reqD, (SupervisorReq a1, SupervisorReq a2) -> a2.getBudget() - a1.getBudget());
+        return reqD;
     }
 }

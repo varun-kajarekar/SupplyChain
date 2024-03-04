@@ -1,6 +1,7 @@
 package com.t7.supplychain.Controller;
 
 import com.t7.supplychain.Entity.Requirement;
+import com.t7.supplychain.Entity.SupervisorReq;
 import com.t7.supplychain.Service.SuperviseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -47,4 +48,17 @@ public class Inventory {
     public List<Requirement> getRequirement(){
         return superviseService.getRequirement();
     }
+
+    @PostMapping("/add-vendor-req")
+    public SupervisorReq addvendorReq(@RequestBody SupervisorReq supervisorReq){
+
+        return superviseService.addvendorReq(supervisorReq);
+    }
+
+    @GetMapping("/get-vendor-req")
+    public List<SupervisorReq> getvendorReq(){
+
+        return superviseService.getvendorReq();
+    }
+
 }

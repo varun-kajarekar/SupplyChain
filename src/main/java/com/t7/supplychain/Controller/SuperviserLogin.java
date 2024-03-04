@@ -27,4 +27,6 @@ public class SuperviserLogin {
     public SuperviserEntity Regester(@RequestBody SuperviserEntity superviserEntity){
         return superviseService.AddSuperViser(superviserEntity);
     }
+
+
 }
