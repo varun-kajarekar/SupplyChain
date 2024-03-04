@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.Random;
 
 @CrossOrigin()
 @RestController
@@ -39,6 +40,7 @@ public class Inventory {
 
     @PostMapping("/add-requirement")
     public Requirement addrequirement(@RequestBody Requirement requirement){
+
         return superviseService.addrequirement(requirement);
     }
     @GetMapping("/get-requirement")

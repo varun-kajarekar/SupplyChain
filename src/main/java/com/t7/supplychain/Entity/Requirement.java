@@ -7,6 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Requirement {
 
     @Id
+    private String id;
+
     private String supervisoruser;
 
     private String materialName;
@@ -19,28 +21,21 @@ public class Requirement {
 
     private String status;
 
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        id = id;
+    }
+
     public String getSupervisoruser() {
         return supervisoruser;
     }
 
     public void setSupervisoruser(String supervisoruser) {
         this.supervisoruser = supervisoruser;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getSupervisorUser() {
-        return supervisoruser;
-    }
-
-    public void setSupervisorUser(String supervisorUser) {
-        supervisoruser = supervisorUser;
     }
 
     public String getMaterialName() {
@@ -75,11 +70,17 @@ public class Requirement {
         ExpDeliveryDate = expDeliveryDate;
     }
 
-    public Requirement() {
+    public String getStatus() {
+        return status;
     }
 
-    public Requirement(String supervisorUser, String materialName, int quantity, int budget, String expDeliveryDate, String status) {
-        supervisoruser = supervisorUser;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Requirement(int id, String supervisoruser, String materialName, int quantity, int budget, String expDeliveryDate, String status) {
+        id = id;
+        this.supervisoruser = supervisoruser;
         this.materialName = materialName;
         Quantity = quantity;
         Budget = budget;
@@ -87,14 +88,19 @@ public class Requirement {
         this.status = status;
     }
 
+    public Requirement() {
+    }
+
     @Override
     public String toString() {
-        return "VendorOrderEntity{" +
-                "SupervisorUser='" + supervisoruser + '\'' +
+        return "Requirement{" +
+                "Id=" + id +
+                ", supervisoruser='" + supervisoruser + '\'' +
                 ", materialName='" + materialName + '\'' +
                 ", Quantity=" + Quantity +
                 ", Budget=" + Budget +
                 ", ExpDeliveryDate='" + ExpDeliveryDate + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
