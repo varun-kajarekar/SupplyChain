@@ -6,8 +6,10 @@ C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supply
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Service\SuperviseService.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\SupplychainApplication.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Service\MailService.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\SupervisorReq.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\ResponseEntity.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Controller\Inventory.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\SuperviserEntity.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Repository\RequirementRepository.java
 C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Entity\Requirement.java
+C:\Users\varun\Desktop\SpringBootProject\supplychain\src\main\java\com\t7\supplychain\Repository\SupervisorReqRepo.java
