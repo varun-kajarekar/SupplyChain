@@ -78,7 +78,7 @@ public class SuperviserServiceImpl implements SuperviseService{
     @Override
     public List<SupervisorReq> getvendorReq() {
         List<SupervisorReq> reqD = supervisorReqRepo.findAll();
-        Collections.sort(reqD, (SupervisorReq a1, SupervisorReq a2) -> a2.getBudget() - a1.getBudget());
+        Collections.sort(reqD, (SupervisorReq a1, SupervisorReq a2) -> a1.getBudget() - a2.getBudget());
         return reqD;
     }
 }
